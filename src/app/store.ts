@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import searchReducer from '../containers/home/searchSlice';
+import kittyReduce from '../containers/home/kittySlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    search: searchReducer,
+    kitty: kittyReduce,
   },
 });
 
