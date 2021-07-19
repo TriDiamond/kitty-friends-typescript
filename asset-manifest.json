@@ -8,6 +8,8 @@
     "static/js/2.024c5a95.chunk.js": "/kitty-friends-typescript/static/js/2.024c5a95.chunk.js",
     "static/js/2.024c5a95.chunk.js.map": "/kitty-friends-typescript/static/js/2.024c5a95.chunk.js.map",
     "index.html": "/kitty-friends-typescript/index.html",
+    "service-worker.js": "/kitty-friends-typescript/service-worker.js",
+    "service-worker.js.map": "/kitty-friends-typescript/service-worker.js.map",
     "static/css/main.2212a308.chunk.css.map": "/kitty-friends-typescript/static/css/main.2212a308.chunk.css.map",
     "static/js/2.024c5a95.chunk.js.LICENSE.txt": "/kitty-friends-typescript/static/js/2.024c5a95.chunk.js.LICENSE.txt"
   },
