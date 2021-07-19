@@ -8,6 +8,7 @@ import { ErrorBoundry } from '../../containers/errorBoundary/ErrorBoundry';
 import { SearchBox } from '../../components/searchBox/SearchBox';
 import { CardList } from '../../components/card/CardList';
 import { Title } from '../../components/title/Title';
+import GithubCorner from 'react-github-corner';
 
 export const Home = () => {
   const searchField = useAppSelector(selectSearchField);
@@ -33,32 +34,35 @@ export const Home = () => {
   };
 
   return (
-    <div className="block w-full px-6">
-      <div className="max-w-4xl lg:max-w-6xl mx-auto pb-12 py-6">
-        <div className="flex flex-col justify-center items-center my-6">
-          {isPending ? (
-            <>
-              <Title context="Loading..." />
-            </>
-          ) : (
-            <>
-              <Title context="Kitty Friends" />
-            </>
-          )}
-          <SearchBox searchChange={onSearchChange} />
-        </div>
-        <ErrorBoundry>
-          <CardList data={filteredKitties} />
-        </ErrorBoundry>
-        <div className="flex flex-col items-center mt-10 text-gray-400 text-lg">
-          <p>
-            Made with 💎 by
-            <a href="https://github.com/TriDiamond"> Tridiamond</a>
-          </p>
-          <p>Build with React + Redux</p>
+    <>
+      <GithubCorner href="https://github.com/TriDiamond/kitty-friends-typescript" />
+      <div className="block w-full px-6">
+        <div className="max-w-4xl lg:max-w-6xl mx-auto pb-12 py-6">
+          <div className="flex flex-col justify-center items-center my-6">
+            {isPending ? (
+              <>
+                <Title context="Loading..." />
+              </>
+            ) : (
+              <>
+                <Title context="Kitty Friends" />
+              </>
+            )}
+            <SearchBox searchChange={onSearchChange} />
+          </div>
+          <ErrorBoundry>
+            <CardList data={filteredKitties} />
+          </ErrorBoundry>
+          <div className="flex flex-col items-center mt-10 text-gray-400 text-lg">
+            <p>
+              Made with 💎 by
+              <a href="https://github.com/TriDiamond"> Tridiamond</a>
+            </p>
+            <p>Build with React + Redux</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
